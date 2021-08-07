@@ -1,0 +1,106 @@
+/*ESTILOS PAGINA DE PRODUCTO*/
+.photo-container-gradiweb{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    margin-right: 1px;
+}
+.galeria_gradiweb{
+    display: flex;
+    flex-direction: column;
+    order:1;
+    justify-content: center;
+}
+.galeria_gradiweb li{
+    width: 100%;
+}
+.main-photo{
+    order:2;
+    background: #f7de1f;
+}
+.product-content-gradiweb{
+    background:#f7de1f ;
+    padding: 0;
+}
+.product-single{
+    display: flex;
+}
+/*ELIMINAR COLOR DE FONDO EN LAS VARIANTES*/
+.single-option-radio{
+    background:transparent;
+}
+/*TITULO DEL PRODUCTO*/
+.product-single__meta{
+    padding-top: 0;
+}
+.product-single__title{
+    background: #fff;
+    padding: 30px 0px;
+}
+/*VARIANTES DEL PRODUCTO*/
+.single-option-radio label{
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    padding: 15px 0px;
+}
+.product-form__item{
+    display: inline-block;
+}
+
+.color_options input:checked + label{
+    border: 3px #fff solid;
+}
+/*BOTON ADD TO CART*/
+.product-single__description{
+    margin-left: 30px;
+}
+.product-single__add-to-cart{
+    align-items: center;
+}
+.custom-btn{
+    background: #000;
+    color: #fff;
+    border-radius: 50px;
+    margin-left: 50px;
+}
+.btn--add-to-cart{
+    margin-top: 0;
+    padding: 0;
+}
+/*PRECIO*/
+.product-single__price{
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    .product-single{
+        flex-direction: column;
+        margin-left: -30px;
+    }
+    .product-single__add-to-cart{
+        display: block;
+    }
+    .custom-btn{
+        margin-left: 0;
+    }
+    .product-single__description{
+        margin-left: 0;
+        text-align: center;
+        padding: 5px;
+    }
+    .photo-container-gradiweb{
+        grid-template-columns: 100%;
+    }
+    .main-photo{
+        margin-left: 25px;
+        order: 0;
+    }
+    .product-single__media-group-wrapper .slick__controls{
+        margin: auto;
+    }
+    /*AJUSTE COLECCION HOMEPAGE*/
+    .product--wrapper {
+        overflow: visible;
+    }
+
+}

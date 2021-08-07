@@ -1,0 +1,70 @@
+<style>
+    {%if request.page_type != 'index'%}
+    .social-networks-container{
+        display:none;
+    }
+    {% endif %}
+    .social-networks-container{
+        z-index:4;
+        position:absolute;
+        bottom:20px;
+        left:10px;
+    }
+    .netkork-icons{
+        font-size:2rem;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        margin-top: 5px;
+        background:#000;
+    }
+    .netkork-icons a{
+        color:#fff;
+    }
+    .netkork-icons:hover{
+        background:#fff;
+        transition:all 0.5s;
+    }
+    .netkork-icons a:hover{
+        color:#000;
+        transition:all 0.5s;
+    }
+    @media (max-width: 768px){
+        .social-networks-container{
+            display:none;
+        }
+    }
+</style>
+<div class="social-networks-container">
+    <div class="netkork-icons"><a href="{{ section.settings.link_facebook }}" target="!blank"><i class="fab fa-facebook-f"></i></a></div>
+    <div class="netkork-icons"><a href="{{ section.settings.link_twitter }}" target="!blank"><i class="fab fa-twitter"></i></a></div>
+    <div class="netkork-icons"><a href="{{ section.settings.link_instagram }}" target="!blank"><i class="fab fa-instagram"></i></a></div>
+</div>
+{% schema %}
+{
+  "name":"networks",
+  "settings": [
+    {
+        "type":"url",
+        "id":"link_facebook",
+        "label":"link de facebook"
+    },
+    {
+        "type":"url",
+        "id":"link_twitter",
+        "label":"link de twitter"
+    },
+    {
+        "type":"url",
+        "id":"link_instagram",
+        "label":"link de instagram"
+    }
+  ],
+  "presets": [
+    {
+      "name":"Networks",
+      "category":"Promocional"
+    }
+  ]
+}
+{% endschema %}
